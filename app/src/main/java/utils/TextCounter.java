@@ -5,9 +5,8 @@ import android.widget.Toast;
 
 public class TextCounter {
 
-    public static String getCharsCount(String input, Context context) {
+    public static String getCharsCount(String input) {
         if (input == null || input.isEmpty()) {
-            Toast.makeText(context, "Text field is empty!", Toast.LENGTH_LONG).show();
             return "0";
         }
         else {
@@ -15,9 +14,8 @@ public class TextCounter {
         }
     }
 
-    public static String countWordsUsingSplit(String input, Context context) {
+    public static String countWordsUsingSplit(String input) {
         if (input == null || input.isEmpty()) {
-            Toast.makeText(context, "Text field is empty!", Toast.LENGTH_LONG).show();
             return "0";
         }
         else {

@@ -2,6 +2,8 @@ package com.example.a2laboratorinis;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Application;
+import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -33,10 +35,10 @@ public class MainActivity extends AppCompatActivity {
 
     public void onBtnClick(View view) {
         if(this.spMain.getSelectedItem().toString().equals(getResources().getString(R.string.chars_selection))) {
-            this.tvMain.setText(TextCounter.getCharsCount(this.edPhrase.getText().toString(), getApplicationContext()));
+            this.tvMain.setText(TextCounter.getCharsCount(this.edPhrase.getText().toString()));
         }
         else {
-            this.tvMain.setText(TextCounter.countWordsUsingSplit(this.edPhrase.getText().toString(), getApplicationContext()));
+            this.tvMain.setText(TextCounter.countWordsUsingSplit(this.edPhrase.getText().toString()));
         }
     }
 }
